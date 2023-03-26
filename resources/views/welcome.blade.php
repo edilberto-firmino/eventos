@@ -15,7 +15,7 @@
     <h2>Buscando por: {{ $search }}</h2>
     @else
     <h2>Próximos Eventos</h2>
-    <p class="subtitle">Veja os eventos dos próximos dias</p>
+    <p class="subtitle">Veja os próximos eventos</p>
     @endif
     <div id="cards-container" class="row">
         @foreach($events as $event)
