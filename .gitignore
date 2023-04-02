@@ -1,10 +1,12 @@
 /node_modules
+<<<<<<< HEAD
 /public/hot
 /public/storage
 /public/img/events/
+=======
+>>>>>>> c6c9facc6804e8c14597ad4942e450bef6d906a9
 /storage/*.key
 /vendor
-.env
 .env.backup
 .phpunit.result.cache
 Homestead.json
