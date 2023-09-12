@@ -1,0 +1,40 @@
+/* Estilo para ocultar o menu na inicialização */
+.collapsed-menu {
+    display: none;
+}
+
+/* Estilos para o menu recolhível quando expandido */
+.collapsed-menu.show {
+    display: block;
+    background-color: #333; /* Cor de fundo */
+    position: absolute;
+    top: 60px; /* Ajuste a altura conforme necessário */
+    left: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+.collapsed-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.collapsed-menu ul li {
+    padding: 10px 20px;
+    border-bottom: 1px solid #555; /* Linhas divisoras */
+}
+
+.collapsed-menu ul li:last-child {
+    border-bottom: none; /* Remove a linha divisora do último item */
+}
+
+.collapsed-menu ul li a {
+    color: #fff; /* Cor do texto */
+    text-decoration: none;
+    display: block;
+}
+
+.collapsed-menu ul li a:hover {
+    background-color: #555; /* Cor de fundo do item ao passar o mouse */
+}
