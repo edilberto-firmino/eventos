@@ -25,12 +25,15 @@
                     <td><a href="/events/{{ $event->id }}">{{ $event->title }}</a></td>
                     <td>{{ count($event->users) }}</td>
                     <td>
-                        <a href="/events/edit/{{ $event->id }}" class="btn btn-info edit-btn"><ion-icon name="create-outline"></ion-icon> Editar</a> 
-                        <form action="/events/{{ $event->id }}" method="POST">
-                            @csrf
-                            @method('DELETE')
-                            <button type="submit" class="btn btn-danger delete-btn"><ion-icon name="trash-outline"></ion-icon> Deletar</button>
-                        </form>
+                        <div class="btn-group" role="group">
+                            <a href="/events/{{ $event->id }}" class="btn btn-primary mr-2"><ion-icon name="eye-outline"></ion-icon> Show</a>
+                            <a href="/events/edit/{{ $event->id }}" class="btn btn-info edit-btn  mr-2"><ion-icon name="create-outline"></ion-icon> Editar</a>
+                            <form action="/events/{{ $event->id }}" method="POST">
+                                @csrf
+                                @method('DELETE')
+                                <button type="submit" class="btn btn-danger delete-btn"><ion-icon name="trash-outline"></ion-icon> Deletar</button>
+                            </form>
+                        </div>
                     </td>
                 </tr>
             @endforeach    
