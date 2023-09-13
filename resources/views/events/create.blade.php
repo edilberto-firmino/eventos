@@ -32,6 +32,10 @@
       </select>
     </div>
     <div class="form-group">
+      <label for="title">Link do vídeo do YouTube:</label>
+      <input type="text" class="form-control" id="video_link" name="video_link" placeholder="Link do vídeo">
+    </div>
+    <div class="form-group">
       <label for="title">Descrição:</label>
       <textarea name="description" id="description" class="form-control" placeholder="O que vai acontecer no evento?"></textarea>
     </div>
