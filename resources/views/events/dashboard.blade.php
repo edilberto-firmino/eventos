@@ -5,7 +5,7 @@
 @section('content')
 
 <div class="col-md-10 offset-md-1 dashboard-title-container">
-    <h1>Meus Eventos</h1>
+    <h1>Móveis Cadastrados</h1>
 </div>
 <div class="col-md-10 offset-md-1 dashboard-events-container">
     @if(count($events) > 0)
@@ -14,7 +14,7 @@
             <tr>
                 <th scope="col">#</th>
                 <th scope="col">Nome</th>
-                <th scope="col">Participantes</th>
+                <th scope="col">Clientes</th>
                 <th scope="col">Ações</th>
             </tr>
         </thead>
@@ -40,11 +40,11 @@
         </tbody>
     </table>
     @else
-    <p>Você ainda não tem eventos, <a href="/events/create">criar evento</a></p>
+    <p>Você ainda não tem Móveis Cadastrados, <a href="/events/create">Cadastrar</a></p>
     @endif
 </div>
 <div class="col-md-10 offset-md-1 dashboard-title-container">
-    <h1>Eventos que estou participando</h1>
+    <h1>Orçamentos Solicitados</h1>
 </div>
 <div class="col-md-10 offset-md-1 dashboard-events-container">
 @if(count($eventsasparticipant) > 0)
@@ -53,7 +53,7 @@
         <tr>
             <th scope="col">#</th>
             <th scope="col">Nome</th>
-            <th scope="col">Participantes</th>
+            <th scope="col">Clientes</th>
             <th scope="col">Ações</th>
         </tr>
     </thead>
@@ -69,7 +69,7 @@
                         @method("DELETE")
                         <button type="submit" class="btn btn-danger delete-btn">
                             <ion-icon name="trash-outline"></ion-icon> 
-                            Sair do Evento
+                            Sair
                         </button>
                     </form>
                 </td>
@@ -78,7 +78,7 @@
     </tbody>
 </table>
 @else
-<p>Você ainda não está participando de nenhum evento, <a href="/">veja todos os eventos</a></p>
+<p>Você ainda não está participando de nenhum Orçamento, <a href="/">veja todos os Orçamentos</a></p>
 @endif
 </div>
 @endsection

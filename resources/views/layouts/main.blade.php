@@ -31,14 +31,14 @@
             <div class="collapse navbar-collapse" id="navbar">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a href="/" class="nav-link">Eventos</a>
+                        <a href="/" class="nav-link">Móveis</a>
                     </li>
                     <li class="nav-item">
-                        <a href="/events/create" class="nav-link">Criar Eventos</a>
+                        <a href="/events/create" class="nav-link">Adicionar Móveis</a>
                     </li>
                     @auth
                     <li class="nav-item">
-                        <a href="/dashboard" class="nav-link">Meus eventos</a>
+                        <a href="/dashboard" class="nav-link">Móveis Cadastrados</a>
                     </li>
                     <li class="nav-item">
                         <form action="/logout" method="POST">
@@ -66,7 +66,7 @@
             <li><a href="/">Eventos</a></li>
             <li><a href="/events/create">Criar Eventos</a></li>
             @auth
-            <li><a href="/dashboard">Meus eventos</a></li>
+            <li><a href="/dashboard">Móveis Cadastrados</a></li>
             <li>
                 <form action="/logout" method="POST">
                     @csrf
@@ -92,7 +92,10 @@
         </div>
     </main>
     <footer>
-        <p>EDev &copy; 2023</p>
+    @php
+    $datetime = new DateTime();
+    @endphp
+        <p>EST&copy; {{$datetime->format('Y')}}</p>
     </footer>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-pzjw8f+ua7Kw1TIq0v8FqFjcJ6pajs/rfdfs3SO+kObUds5tv83I5f1k6D5F5jN5i2" crossorigin="anonymous"></script>

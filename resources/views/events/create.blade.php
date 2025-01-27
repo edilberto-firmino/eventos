@@ -9,15 +9,15 @@
   <form action="/events" method="POST" enctype="multipart/form-data">
     @csrf
     <div class="form-group">
-      <label for="image">Imagem do Evento:</label>
-      <input type="file" id="image" name="image" class="from-control-file" required>
+      <label for="image">Imagem da Coleção:</label>
+      <input type="file" id="image" name="image" class="from-control-file" multiple required>
     </div>
     <div class="form-group">
-      <label for="title">Evento:</label>
+      <label for="title">Titulo:</label>
       <input type="text" class="form-control" id="title" name="title" placeholder="Nome do evento" required>
     </div>
     <div class="form-group">
-      <label for="date">Data do evento:</label>
+      <label for="date">Data da Coleção:</label>
       <input type="date" class="form-control" id="date" name="date" required>
     </div>
     <div class="form-group">
@@ -25,7 +25,7 @@
       <input type="text" class="form-control" id="city" name="city" placeholder="Local do evento" required>
     </div>
     <div class="form-group">
-      <label for="title">O evento é privado?</label>
+      <label for="title">Disponivel?</label>
       <select name="private" id="private" class="form-control">
         <option value="0">Não</option>
         <option value="1">Sim</option>
@@ -40,21 +40,21 @@
       <textarea name="description" id="description" class="form-control" placeholder="O que vai acontecer no evento?"></textarea>
     </div>
     <div class="form-group">
-      <label for="title">Adicione itens de infraestrutura:</label>
+      <label for="title">Tipo de Matérial:</label>
       <div class="form-group">
-        <input type="checkbox" name="items[]" value="Cadeiras"> Cadeiras
+        <input type="checkbox" name="items[]" value="Fibra Sintética"> Fibra Sintética
       </div>
       <div class="form-group">
-        <input type="checkbox" name="items[]" value="Palco"> Palco
+        <input type="checkbox" name="items[]" value="Corda Náutica"> Corda Náutica
       </div>
       <div class="form-group">
-        <input type="checkbox" name="items[]" value="Cerveja grátis"> Cerveja grátis
+        <input type="checkbox" name="items[]" value="Fibra Junco"> Fibra Junco
       </div>
       <div class="form-group">
-        <input type="checkbox" name="items[]" value="Open Food"> Open food
+        <input type="checkbox" name="items[]" value="Vime Plastico"> Vime Plastico
       </div>
       <div class="form-group">
-        <input type="checkbox" name="items[]" value="Brindes"> Brindes
+        <input type="checkbox" name="items[]" value="Palha Indiana"> Palha Indiana 
       </div>
     </div>
     <input type="submit" class="btn btn-primary" value="Criar Evento">

@@ -10,7 +10,7 @@
     @csrf
     @method('PUT')
     <div class="form-group">
-      <label for="image">Imagem do Evento:</label>
+      <label for="image">Imagem da Coleção:</label>
       <input type="file" id="image" name="image" class="from-control-file">
       <img src="/img/events/{{ $event->image }}" alt="{{ $event->title }}" class="img-preview">
     </div>
@@ -44,19 +44,19 @@
     <div class="form-group">
       <label for="title">Adicione itens de infraestrutura:</label>
       <div class="form-group">	
-        <input type="checkbox" name="items[]" value="Cadeiras"> Cadeiras
+        <input type="checkbox" name="items[]" value="Fibra Sintética"> Fibra Sintética
       </div>
       <div class="form-group">	
-        <input type="checkbox" name="items[]" value="Palco"> Palco
+        <input type="checkbox" name="items[]" value="Corda Náutica"> Corda Náutica
       </div>
       <div class="form-group">	
-        <input type="checkbox" name="items[]" value="Cerveja grátis"> Cerveja grátis
+        <input type="checkbox" name="items[]" value="Fibra Junco"> Fibra Junco
       </div>
       <div class="form-group">	
-        <input type="checkbox" name="items[]" value="Open Food"> Open food
+        <input type="checkbox" name="items[]" value="Vime Plastico"> Vime Plastico
       </div>
       <div class="form-group">	
-        <input type="checkbox" name="items[]" value="Brindes"> Brindes
+        <input type="checkbox" name="items[]" value="Palha Indiana"> Palha Indiana
       </div>
     </div>
     <input type="submit" class="btn btn-primary" value="Editar Evento">
